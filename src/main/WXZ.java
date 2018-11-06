@@ -21,6 +21,8 @@ public class WXZ extends Rectangle{
 	
 	public void move(double dir){
 		x+=(int)(dir*(double)Configure.HORIZONTAL_SPEED*Configure.LOOP_PERIOD);
+		if(x<0) x=0;
+		if(x+width>Configure.SCREEN_WIDTH) x=Configure.SCREEN_WIDTH-width;
 	}
 	public int score(){
 		return mScore;
