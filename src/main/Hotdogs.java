@@ -17,7 +17,7 @@ public class Hotdogs extends LinkedList<Hotdog>{
 		while (iterator.hasNext()){
 			Hotdog hotdog=iterator.next();
 			hotdog.loop();
-			if(hotdog.y+hotdog.height>Configure.SCREEN_HEIGHT){
+			if(hotdog.y>Configure.SCREEN_HEIGHT){
 				iterator.remove();
 			}
 		}

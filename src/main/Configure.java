@@ -19,4 +19,6 @@ public class Configure {
 	public static final int ROUND_TIME=60; //the time of a round
 	
 	public static final double HOTDOG_SHOW_UP_RATE=0.03;
+	
+	public static final double SO_DELICIOUS_SHOW_UP_RATE=0.9;
 }

@@ -28,14 +28,17 @@ public class WXZ extends Rectangle{
 		return mScore;
 	}
 	
-	public void loop(Hotdogs hotdogs){
+	public boolean loop(Hotdogs hotdogs){
+		boolean ret=false;
 		java.util.Iterator<Hotdog> iterator=hotdogs.iterator();
 		while (iterator.hasNext()) {
 			Hotdog hotdog=iterator.next();
 			if(hotdog.intersects(this)&&hotdog.y+hotdog.height<y+Configure.TORRANT_Y_DEL){
 				mScore++;
 				iterator.remove();
+				ret=true;
 			}
 		}
+		return ret;
 	}
 }
